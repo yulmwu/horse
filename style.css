@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+#container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#racetrack-wrapper {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.horse-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.horse-name {
+    width: 8em;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.track-wrapper {
+    flex-grow: 1;
+    position: relative;
+}
+
+.racetrack {
+    width: 100%;
+    height: 34px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+}
+
+.racetrack::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    background: url('horserun.gif') no-repeat center center;
+    background-size: cover;
+}
+
+.racetrack.running::-webkit-slider-thumb {
+    background: url('horserun_run.gif') no-repeat center center;
+    background-size: cover;
+}
+
+.racetrack::-moz-range-thumb {
+    width: 32px;
+    height: 32px;
+    background: url('horserun.gif') no-repeat center center;
+    background-size: cover;
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    color: #fff;
+}
+
+.bg-success {
+    background-color: #28a745;
+}
+
+.bg-secondary {
+    background-color: #6c757d;
+}
+
+.bg-fail {
+    background-color: #f04646;
+}
+
+.d-none {
+    display: none;
+}
+
+.btn {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid #333;
+    border-radius: 0.3rem;
+    background: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #f9f9f9;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
